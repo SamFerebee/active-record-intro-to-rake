@@ -9,6 +9,11 @@ task :sup do
   puts "sup dude"
 end
 
+desc "hola!"
+task :hola do
+  puts "hola de Rake!"
+end
+
 end
 
 namespace :db do
@@ -26,9 +31,9 @@ namespace :db do
     require_relative './db/seeds.rb'
   end
 
-  desc 'drop into the Pry console'
-  task :console => :environment do
-    Pry.start
-  end 
 end 
 
+desc 'drop into the Pry console'
+task :console => :environment do
+  Pry.start
+end 
